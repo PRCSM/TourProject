@@ -1,0 +1,584 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+/* css for preloder */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #9e9e9e;
+    border-right: 10px solid #848484;
+    border-bottom: 10px solid #404040;
+    border-left: 10px solid #e9e9e9;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+/* .................navbar CSS.................. */
+.hero{
+    height: 100vh;
+    background-image: url(./assects/About_bg.svg);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    margin: 1vh 2vmax;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+    padding: 3px;
+    max-height: 13vh;
+}
+.link{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:5vmin;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+}
+.logo img{
+    height: 10vh;
+}
+.link li button{
+    color: white;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+.button1{
+    background-color: transparent;
+    border: 2px solid #FA8B02;
+    transition: 0.5s ease-in-out;
+}
+.button2{
+    background-color: #FA8B02;
+    border:0;
+    transition: 0.5s ease-in-out;
+}
+.link li img{
+    height: 10px;
+}
+.language{
+    color: rgba(212, 212, 212, 0.63);
+}
+.About{
+    text-decoration: underline #FA8B02 2px;
+}
+.link li a{
+    color: white;
+    text-decoration: none;
+}
+
+.button1:hover{
+    background-color: #FA8B02;
+}
+.button2:hover{
+    background-color: #b06b16f2;
+}
+.link li:hover{
+    transition: 1s ease;
+    text-decoration: underline #FA8B02 2px;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    transition: .5s ease;
+}
+
+button:hover{
+    background-color: #b06b16f2;
+    box-shadow: 2px 5px 3px 2px #fa8a0232;
+    transform: scale(1.02);
+}
+
+
+/*..................About Heading CSS................  */
+
+.about{
+    display: flex;
+    flex-direction: column;
+    height: 87vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+
+}
+.about h1{
+    font-family: "Cookie", cursive;
+    word-spacing: 0.5vmax;
+    font-weight: 500;
+    font-size: 6vmax;
+    color: rgba(255, 255, 255);
+}
+.about h2{
+    font-family: "Inter", sans-serif;
+    font-size: 1.5vmax;
+    overflow: hidden;
+    font-weight: 450;
+    text-overflow: ellipsis;
+    max-width: 60%;
+    line-height: 1.3;
+    color: rgba(255, 255, 255,0.8);
+    word-spacing: 0.1vmax;
+    margin-bottom: 20px;
+}
+.about button{
+    border: 2px solid white;
+    border-radius: 20px;
+    height: 40px;
+    padding: 10px;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    color: rgba(255, 255, 255);
+    font-family: "Inter", sans-serif;
+    font-size: 1vmax;
+    font-weight: 500;
+    box-shadow: 2px 4px 5px rgba(255, 255, 255, 0.675);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.about button:hover{
+    border: 2px solid #FA8B02;
+    box-shadow: 2px 4px 5px rgba(250, 139, 2,0.7);
+}
+
+
+/* css for about Us section */
+
+
+.section{
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.aboutUs{
+    display: flex;
+    font-family:"Inter", sans-serif;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    height: fit-content;
+    margin: 70px 0px;
+    overflow: hidden;
+    font-size: 16px;
+    flex-wrap: wrap;
+    transition: all 0.9s ease-in;
+}
+.aboutimg img{
+    height: 50vmin;
+}
+.aboutdata{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+}
+.aboutdata .title{
+    font-size: 0.9em;
+    color: rgba(55, 55, 55, 0.387);
+    font-weight: 500;
+    height: fit-content;
+}
+.aboutdata h3{
+    font-size: 1.4em;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.774);
+    margin-bottom: 20px;
+}
+.aboutdata p{
+    font-size: 0.87em;
+    width: 80vmin;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #000000cd;
+}
+.aboutpast{
+    display: flex;
+    gap: 50px;
+}
+.aboutthe{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.numOf{
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #FA8B02;
+}
+.aboutthe h5{
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.521);
+    font-weight: 500;
+}
+
+
+/* animation css */
+.animateright{
+    transform: translateX(100%);
+    opacity: 0;
+}
+.showanimateright{
+    transform: translateX(0);
+    opacity: 1;
+}
+.animateleft{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.showanimateleft{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+/* css for testimonial section */
+.testimonial{
+    background-image: linear-gradient(45deg, rgba(224, 224, 224, 0.315), #fa8a029d);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 70px 0px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.achivement{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 160px;
+    width: 260px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.582);
+    text-align: center;
+    font-size: 16px;
+    font-family:"Inter", sans-serif;
+    gap: 20px;
+    box-shadow: 2px 5px 3px 2px #fa8a0232;
+    transition: all 0.5s ease-in-out;
+}
+.achivement h3{
+    font-size: 1em;
+    font-weight: 500;
+    color: #000000b3;
+}
+.achivement i{
+    color: #FA8B02;
+    font-size: 1.5em;
+}
+.achivement:hover{
+    transform: scale(1.03);
+}
+.achivement:hover i{
+    color: #9e5700;
+}
+.achivement:hover h3{
+    color: rgb(0, 0, 0);
+}
+
+
+
+
+/* css for customer review section */
+
+
+.customereview{
+    margin: 50px 0px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-family:"Inter", sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+.reviewhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviewhead h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.reviewicon span{
+    color: rgba(159, 159, 159, 0.39);
+    font-weight: 700;
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+}
+.reviewicon span:hover{
+    color: #FA8B02;
+}
+.reviewsection{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 430px;
+    height: 320px;
+    border: 1px solid #fa8a023d;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 2px rgba(100, 100, 100, 0.1);
+    transition: all 0.6s ease-in-out;
+}
+
+.review:hover{
+    transform: scale(1.03);
+    border: 2px solid #fa8a029c;
+}
+.review:hover .reviewimg h4{
+    color: #FA8B02;
+}
+
+.reviewimg .img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: url(./assects/customer.png);
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #FA8B02;
+    margin-bottom: 10px;
+}
+.reviewimg h4{
+    font-size: 1em;
+    font-weight: 700;
+    transition: all 0.6s ease-in-out;
+}
+.reviewdetails{
+    font-size: 0.65em;
+    font-weight: 500;
+    width: 95%;
+    line-height: 1.3;
+    color: #000000a9;
+    position: relative;
+}
+.reviewdetails::before{
+    content: "\0022";
+    font-style: italic;
+    font-size: 4em;
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    transition: all 0.6s ease-in-out;
+}
+.reviewdetails::after{
+    content: "\0022";
+    font-style: italic;
+    font-size: 4em;
+    position: absolute;
+    right: 0px;
+    transition: all 0.6s ease-in-out;
+}
+.review:hover .reviewdetails::before{
+    color: #FA8B02;
+}
+.review:hover .reviewdetails::after{
+    color: #FA8B02;
+}
+
+
+
+
+/* css for footer section */
+footer{
+    background-image: linear-gradient(0deg,rgba(255, 187, 104, 0.329), rgba(78, 78, 78, 0.154));
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    gap: 20px;
+    padding: 20px;
+    font-family:"Inter", sans-serif;
+    font-size: 16px;
+}
+.footer hr{
+    background-color: #00000045;
+}
+.footercontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    /* justify-items: center; */
+}
+.footerlinks{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.footerlinks h4{
+    font-size: 1em;
+}
+.footerlinks ul{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.footerlink{
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #000000af;
+}
+.footerlink i{
+    color: #FA8B02;
+}
+.footerlinks .social{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 7px;
+    color: #FA8B02;
+    width: 80%;
+    margin-left: 10%;
+}
+.footerend{
+    font-size: 0.6em;
+    font-weight: 400;
+    align-self: center;
+}
+ul{
+    list-style: none;
+}
+
+
+
+
+
+/* css for screen size below 500px */
+@media (max-width:600px) {
+    .aboutdata{
+        font-size: 10px;
+    }
+
+    .aboutUs{
+        gap: 20px;
+    }
+
+    .review{
+        width: 325px;
+        height: 360px;
+    }
+}
+
+
+
+
+
+/* css for screen size below 1200px */
+
+@media (max-width: 1200px) {
+    .pages .link{
+        position: absolute;     
+        width: 100%;
+        right: 0%;
+        height: 90vh;
+        top: calc(11vh + 3px);
+        flex-direction: column;
+        justify-content: center;
+        gap: 10vh;
+        align-items: center;
+        background-color: rgba(101, 101, 101, 0.822);
+        border-radius: 20px;
+        font-size: 30px;
+    }
+    .zindex{
+        z-index: -1;
+    }
+    .visible{
+        display: none;
+    }
+    .menu{
+        display: flex;
+    }
+    .hamburger{
+        display: block;
+    }
+    .language{
+        display: none;
+    }
+    .link li button{
+        padding: 6px 18px;
+        font-size: 10px;;
+    }
+    .account .link{
+        gap: 2vmin;
+    }
+    div.active .line1{
+        transform: translateY(7px) rotate(45deg);
+        }
+    div.active .line2{
+        opacity: 0;
+    }
+    div.active .line3{
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}

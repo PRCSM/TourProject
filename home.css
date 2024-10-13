@@ -1,0 +1,1272 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 16px;
+}
+
+/* css for preloder */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 10px solid #9e9e9e;
+    border-right: 10px solid #848484;
+    border-bottom: 10px solid #404040;
+    border-left: 10px solid #e9e9e9;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+/*............... navbar CSS............*/
+.hero{
+    height: 100vh;
+    background-image: url(./assects/hero_bg.png);
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    margin: 1vh 2vmax;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(40px);
+    border-radius: 10px;
+    padding: 3px;
+    max-height: 13vh;
+}
+.link{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap:5vmin;
+    color: white;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+}
+.logo img{
+    height: 10vh;
+}
+.link li button{
+    color: white;
+    padding: 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+.button1{
+    background-color: transparent;
+    border: 2px solid #FA8B02;
+    transition: 0.5s ease-in-out;
+}
+.button2{
+    background-color: #FA8B02;
+    border:0;
+    transition: 0.5s ease-in-out;
+}
+.link li img{
+    height: 10px;
+}
+.language{
+    color: rgba(212, 212, 212, 0.63);
+}
+.home{
+    text-decoration: underline #FA8B02 2px;
+}
+.link li a{
+    color: white;
+    text-decoration: none;
+}
+
+.button1:hover{
+    background-color: #FA8B02;
+}
+.button2:hover{
+    background-color: #b06b16f2;
+}
+.link li:hover{
+    transition: 1s ease;
+    text-decoration: underline #FA8B02 2px;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+}
+.hamburger div{
+    width: 30px;
+    height: 2px;
+    background-color: white;
+    margin: 5px;
+    transition: .5s ease;
+}
+
+/* ............main CSS................... */
+.main{
+    display: flex;
+    height: 87vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.main h1{
+    font-family: "Cookie", cursive;
+    font-weight: 500;
+    word-spacing: 0.5vmax;
+    font-size: 6vmax;
+    color: rgba(255, 255, 255);
+}
+
+.main h2{
+    font-family: "Inter", sans-serif;
+    font-size: 1.4vmax;
+    overflow: hidden;
+    font-weight: 600;
+    color: rgba(255, 255, 255,0.9);
+    word-spacing: 0.2vmax;
+}
+
+
+/*..................... Search Bar CSS................ */
+.travels{
+    margin-top: 90px;
+    height: fit-content;
+    width: 70vmax;
+    background-color: rgba(240, 240, 240, 0.422);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+.travels>div{
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.771);
+    border-radius: 10px 10px 0% 0%;
+    display: flex;
+    /* gap: 70px; */
+    /* padding: 8px; */
+    align-items: center;
+    background-color: rgba(240, 240, 240, 0.422);
+}
+.travels div h4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-family:"Inter", sans-serif;
+    font-size: 1rem;
+    font-weight: 450;
+    padding: 10px;
+    cursor: pointer;
+}
+.publictravels {
+    background-color: white;
+    border-radius: 10px 0% 0% 0%;
+    color: #FA8B02;
+}
+.privatetravels:hover{
+    color: #FA8B02;
+}
+.icons{
+    height: 1.2em;
+}
+.selectmode{
+    list-style: none;
+    display: flex;
+    font-family:"Inter", sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 0px 10px 10px 10px;
+    gap: 30px;
+}
+.modes{
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.modes h4{
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-wrap: nowrap;
+}
+.modes h5{
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    color: #00000080;
+    font-size: 0.6rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+.downarrow{
+    height: 1vmax;
+}
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: #FA8B02;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.search:hover{
+    background-color: #b06b16f2;
+}
+hr{
+    border: 0.5px solid rgba(168, 165, 165,0.3); 
+    height: 70%;
+}
+
+/* popolar destination section CSS */
+.destination{
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    font-family:"Inter", sans-serif;
+    
+}
+.destination h3{
+    font-size: 4vmin;
+}
+.card_container{
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.card_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.box1{
+    background-image: url(./assects/heroassects/popular_dest/popular_dest_1.svg);
+}
+.box2{
+    background-image: url(./assects/heroassects/popular_dest/popular_dest_2.svg);
+}
+.box3{
+    background-image: url(./assects/heroassects/popular_dest/popular_dest_3.svg);
+}
+.box4{
+    background-image: url(./assects/heroassects/popular_dest/popular_dest_4.svg);
+}
+.card_data{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(transparent,#1c1c1cd1 88%);
+    border-radius: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    bottom: -100%;
+    transition: 1s ease-in-out;
+}
+.card_name{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.card_price {
+    font-size: 1.2rem;
+    color: #FA8B02;
+    font-weight: 800;
+}
+.card_description{
+    font-size: 0.9rem;
+    font-weight: 500;
+    width: 80%;
+}
+.card_box:hover .card_data{
+    bottom: 0;
+}
+.card_box:hover{
+    box-shadow: 1px 3px 5px 1px rgba(0, 0, 0,0.4);
+}
+
+
+
+/* css for aboutUs section */
+.section{
+    overflow: hidden;
+}
+
+.aboutUs{
+    height: 85vh;
+    display: flex;
+    font-family:"Inter", sans-serif;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    transition: all 0.8s ease-in;
+
+}
+.aboutimg img{
+    height: 70vmin;
+}
+.aboutdata{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+}
+.aboutdata .title{
+    font-size: 0.9em;
+    color: rgba(55, 55, 55, 0.387);
+    font-weight: 500;
+}
+.aboutdata h3{
+    font-size: 1.4em;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.774);
+    margin-bottom: 20px;
+}
+.aboutdata p{
+    font-size: 0.87em;
+    width: 87vmin;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    color: #000000cd;
+}
+.aboutpast{
+    display: flex;
+    gap: 50px;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.numOf{
+    font-size: 1.7em;
+    font-weight: 700;
+    color: #FA8B02;
+}
+.about h5{
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.521);
+    font-weight: 500;
+}
+
+
+/* css for Special offer section */
+.special_offers{
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    height: 50vh;
+    /* background-color: #fa8a0278; */
+    background-image: linear-gradient(45deg, rgba(224, 224, 224, 0.315), #fa8a029d);
+    
+}
+.offerdetails{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 380px;
+    padding: 40px;
+    border-radius: 20px;
+    background-color:rgba(255, 255, 255, 0.582);
+    text-align: center;
+    font-size: 16px;
+    font-family:"Inter", sans-serif;
+    gap: 20px;
+    box-shadow: 2px 5px 3px 2px #fa8a0232;
+}
+.offerimg img{
+    height: 60vmin;
+}
+.offerdetails h3{
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    font-weight: 800;
+
+}
+.offerdetails p{
+    font-size: 0.8em;
+    font-weight: 400;
+    width: 270px;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: rgba(0, 0, 0, 0.826);
+}
+.offerdetails button{
+    background-color: #FA8B02;
+    padding: 10px 30px 10px 30px;
+    border: 0;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    text-wrap: nowrap;
+    font-size: 1em;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #b06b16f2;
+    box-shadow: 2px 5px 3px 2px #fa8a0232;
+    transform: scale(1.02);
+}
+
+/* css code for services section */
+
+.servicesAval{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    height: 90vh;
+    font-family:"Inter", sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+.servicesAval h2{
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+.services{
+    display: flex;
+    justify-content: center;
+    /* height: 70vh; */
+    align-items: center;
+    gap: 20px;
+}
+.service{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 300px;
+    width: 270px;
+    background-position: center;
+    background-size: cover;
+    gap: 25px;
+    border-radius: 20px;
+    box-shadow: 2px 5px 3px 2px rgba(146, 146, 146, 0.445);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+.service1{
+    background-image: url(./assects/services/services01.svg);
+}
+.service2{
+    background-image: url(./assects/services/services02.svg);
+}
+.service3{
+    background-image: url(./assects/services/services03.svg);
+}
+.service4{
+    background-image: url(./assects/services/services04.svg);
+}
+
+.serviceDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    position: absolute;
+    height: 35%;
+    width: 100%;
+    /* background: linear-gradient(transparent,#ffffff 30%); */
+    background-color: white;
+    border-radius: 0px 0px 20px 20px;
+    top: 100%;
+    text-align: center;
+    /* top: 70%; */
+    box-shadow: 2px 5px 3px 2px rgba(146, 146, 146, 0.445);
+    transition: all 0.8s ease-in-out;
+}
+.serviceDetails h3{
+    font-size: 1em;
+    font-weight: 800;
+    /* margin-bottom: 20px; */
+}
+.serviceDetails p{
+    font-size: 0.8em;
+    width: 220px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.692);
+}
+.service:hover{
+    overflow: visible;
+    transform: scale(1.02);
+}
+.service:hover .serviceDetails{
+    top: 70%;
+}
+
+
+/* booking section css */
+
+.bookNow{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 70vh;
+    /* padding-top: 40px; */
+    background-image: linear-gradient(45deg, rgba(224, 224, 224, 0.315), #fa8a029d);
+    gap: 40px;
+    font-family:"Inter", sans-serif;
+    font-size: 16px;
+}
+.form{
+    transition: 0.5s ease-in;
+}
+.bookingimg{
+    /* align-self: flex-end; */
+    margin-top:100px;
+}
+.bookingimg img{
+    height: 60vmin;
+}
+.form-container {
+    /* padding: 20px 40px; */
+    text-align: center;
+    max-width: 500px;
+    width: 85%;
+    align-self: center;
+    transition: all 2.4s cubic-bezier(0.13, 0.63, 1, 1);
+    /* margin-bottom: 100px; */
+}
+
+.form-container:hover{
+    transform: scale(1.04);
+}
+.form-container .form{
+    background: rgba(255, 255, 255, 0.387);
+    padding: 20px 25px;
+    border-radius: 15px;
+    box-shadow: 2px 3px 5px 2px #fa8a0245;
+}
+h1 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+.form-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    box-shadow: 2px 3px 5px 2px rgba(100, 100, 100, 0.1);
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #333;
+}
+#service{
+    font-family:"Inter", sans-serif;
+    font-size: 0.6em;
+    font-weight: 500;
+    color: #333333ab;
+}
+
+.form-group {
+    position: relative; 
+}
+
+
+.input-container input[type="date"], 
+.input-container input[type="time"] {
+    padding-left: 30px; 
+    padding-right: 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 0.6em;
+    font-weight: 500;
+    color: #333333ab;
+    width: 100%; 
+    position: relative;
+}
+
+.btn {
+    background-color: #FA8B02;
+    padding: 10px 30px 10px 30px;
+    border: 0;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    text-wrap: nowrap;
+    font-size: 1em;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+
+
+/* css code for packages section */
+
+.popularpackages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    height: fit-content;
+    margin: 70px 0px;
+    gap: 30px;
+    font-family:"Inter", sans-serif;
+    font-size: 16px;
+}
+.popularpackages h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.packagescontainer{
+    display: flex;
+    gap: 40px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.package{
+    display: flex;
+    flex-direction: column;
+    /* gap: 13px; */
+    border-radius: 20px;
+    /* background-image: linear-gradient(-90deg,#fa8a0245, #dedede9d);
+    padding: 10px;
+    width: fit-content; */
+    box-shadow: 2px 3px 5px 2px rgba(100, 100, 100, 0.1);
+    transition: all 0.6s ease-in;
+    margin: 30px 5px;
+}
+
+.packageimg{
+    height: 250px;
+    width: 240px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px 20px 0px 0px;
+    
+}
+
+.pak-img1{
+    background-image: url(./assects/popular_package/pop_package01.svg);
+}
+.pak-img2{
+    background-image: url(./assects/popular_package/pop_package02.svg);
+}
+.pak-img3{
+    background-image: url(./assects/popular_package/pop_package03.svg);
+}
+.pak-img4{
+    background-image: url(./assects/popular_package/pop_package04.svg);
+}
+
+.packagedetails{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #fa8a023d;
+    border-top: 0px;
+    /* background-image: linear-gradient(-90deg,#fa8a0245, #dedede9d); */
+    padding: 20px;
+    border-radius: 0px 0px 20px 20px;
+}
+.packagename{
+    font-size: 1em;
+    font-weight: 800;
+    color: #000000bd;
+}
+.packageinfo{
+    font-size: 0.88em;
+    color: #0000007e;
+}
+.packagedetails button{
+    font-size: 1em;
+    font-weight: 500;
+    border: 1px solid #FA8B02;
+    padding: 5px;
+    border-radius: 20px;
+    transition: all 0.5s;
+    color: #FA8B02;
+    background-image: linear-gradient(-90deg,#fa8a0245, #ffffff9d);
+    cursor: pointer;
+}
+.packagedetails button:hover{
+    background-color: #FA8B02;
+    color: white;
+}
+.packageprice{
+    position: relative;
+    color: #0000006d;
+    margin-left: 10px;
+    margin-bottom: 5px;
+}
+.packageprice span{
+    font-size: 2em;
+    color: #FA8B02;
+    font-weight: 800;
+}
+.packageprice::before{
+    content: "€";
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+.packagedetails i{
+    color: #FA8B02;
+    margin-right: 3px;
+}
+.package:hover{
+    transform: scale(1.03);
+}
+.package:hover .packagedetails{
+    border: 2px solid #fa8a029c;
+}
+
+
+/* css for customer review section */
+.customereview{
+    margin: 50px 0px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    gap: 40px;
+    flex-wrap: wrap;
+    font-family:"Inter", sans-serif;
+    font-size: 16px;
+    overflow: hidden;
+}
+.reviewhead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.reviewhead h3{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.reviewicon span{
+    color: rgba(159, 159, 159, 0.39);
+    font-weight: 700;
+    transition: all 0.4s ease-in;
+    cursor: pointer;
+}
+.reviewicon span:hover{
+    color: #FA8B02;
+}
+.reviewsection{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: fit-content;
+    padding: 10px;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 430px;
+    height: 320px;
+    border: 1px solid #fa8a023d;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 2px 3px 5px 2px rgba(100, 100, 100, 0.1);
+    transition: all 0.6s ease-in-out;
+}
+
+.review:hover{
+    transform: scale(1.03);
+    border: 2px solid #fa8a029c;
+}
+.review:hover .reviewimg h4{
+    color: #FA8B02;
+}
+
+.reviewimg .img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-image: url(./assects/customer.png);
+    background-position: center;
+    background-size: cover;
+    border: 2px solid #FA8B02;
+    margin-bottom: 10px;
+}
+.reviewimg h4{
+    font-size: 1em;
+    font-weight: 700;
+    transition: all 0.6s ease-in-out;
+}
+.reviewdetails{
+    font-size: 0.65em;
+    font-weight: 500;
+    width: 95%;
+    line-height: 1.3;
+    color: #000000a9;
+    position: relative;
+}
+.reviewdetails::before{
+    content: "\0022";
+    font-style: italic;
+    font-size: 4em;
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    transition: all 0.6s ease-in-out;
+}
+.reviewdetails::after{
+    content: "\0022";
+    font-style: italic;
+    font-size: 4em;
+    position: absolute;
+    right: 0px;
+    transition: all 0.6s ease-in-out;
+}
+.review:hover .reviewdetails::before{
+    color: #FA8B02;
+}
+.review:hover .reviewdetails::after{
+    color: #FA8B02;
+}
+
+
+/* css for footer section */
+footer{
+    background-image: linear-gradient(0deg,rgba(255, 187, 104, 0.329), rgba(78, 78, 78, 0.154));
+}
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin-left: 10%;
+    gap: 20px;
+    padding: 20px;
+    font-family:"Inter", sans-serif;
+    font-size: 16px;
+}
+.footer hr{
+    background-color: #00000045;
+}
+.footercontainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 25px;
+    justify-content: center;
+    /* justify-items: center; */
+}
+.footerlinks{
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+.footerlinks h4{
+    font-size: 1em;
+}
+.footerlinks ul{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.footerlink{
+    font-size: 0.8em;
+    font-weight: 500;
+    color: #000000af;
+}
+.footerlink i{
+    color: #FA8B02;
+}
+.footerlinks .social{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 7px;
+    color: #FA8B02;
+    width: 80%;
+    margin-left: 10%;
+}
+.footerend{
+    font-size: 0.6em;
+    font-weight: 400;
+    align-self: center;
+}
+ul{
+    list-style: none;
+}
+
+
+/* animation css */
+.animateright{
+    transform: translateX(100%);
+    opacity: 0;
+}
+.showanimateright{
+    transform: translateX(0);
+    opacity: 1;
+}
+.animateleft{
+    transform: translateX(-100%);
+    opacity: 0;
+}
+.showanimateleft{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+
+
+/* css for scree size less than 600px */
+@media (max-width: 600px) {
+    /* css for book bike section */
+    .form-group {
+        grid-template-columns: 1fr;
+    }
+
+    /* css for popular package section */
+    .popularpackages{
+        height: 100%;
+    }
+    .packagescontainer{
+        flex-direction: column;
+    }
+    
+    /* css for customer review section */
+    .review{
+        width: 325px;
+        height: 360px;
+    }
+
+}
+
+
+
+/* for screen size below 1200px */
+
+@media (width <= 1200px) {
+
+        /* ................Search Bar CSS.............. */
+    .travels{
+        margin: 10px;
+        height: fit-content;
+        width: fit-content; 
+    }
+    .travels div h4{
+        font-size: 15px;
+    }
+    .selectmode{
+        padding: 30px 15px 15px 15px;
+        flex-direction: column;
+        gap: 15px;
+        border-radius: 0px 0px 10px 10px;
+        align-items: flex-start;
+
+    }
+    .search{
+        align-self: center;
+    }
+    .modes{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .modes h4{
+        font-size: 13px;
+    }
+    .modes h5{
+        font-size: 11px;
+    }
+    hr{
+        height: 0;
+        width: 100%;
+    }
+
+    /* css for aboutUs section */
+
+    .aboutUs{
+        flex-direction: column;
+        height: 100%;
+        margin-top: 70px;
+        gap: 5px;
+    }
+    /* css for service section */
+    .servicesAval{
+        height: 100vh;
+        margin-top: 20px;
+    }
+    .services{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* css for book now section */
+    .bookNow{
+        flex-direction: column;
+        height: 100%;
+        padding-top: 70px;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+    .bookingimg{
+        margin-top: 30px;
+    }
+    
+
+    .packagescontainer{
+        width: fit-content;
+    }
+}
+
+
+
+
+/* for screen size below 870px */
+@media (max-width:870px) {
+
+    /* ..........navbar CSS........... */
+
+    .pages .link{
+        position: absolute;     
+        width: 100%;
+        right: 0%;
+        height: 90vh;
+        top: calc(11vh + 3px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10vh;
+        align-items: center;
+        background-color: rgba(101, 101, 101, 0.822);
+        border-radius: 20px;
+        font-size: 30px;
+    }
+    .visible{
+        visibility: hidden;
+    }
+    .menu{
+        visibility:visible;
+    }
+    .hamburger{
+        display: block;
+    }
+    .language{
+        display: none;
+    }
+    .link li button{
+        padding: 6px 18px;
+        font-size: 10px;
+    }
+    .account .link{
+        gap: 2vmin;
+    }
+    div.active .line1{
+        transform: translateY(7px) rotate(45deg);
+        }
+    div.active .line2{
+        opacity: 0;
+    }
+    div.active .line3{
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* popular destination css */
+
+    .destination{
+        margin-top: 40px;
+        height: 100%;
+        gap: 40px;
+    }
+    .card_container{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* css for AboutUs */
+    .aboutdata{
+        font-size: 10px;
+    }
+    .aboutdata p{
+        width: 85vmin;
+    }
+
+    /* css for special offer section */
+
+    .special_offers{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        gap: 10px;
+        /* margin-top: 60px; */
+        /* padding-bottom: 50px; */
+    }
+    .servicesAval{
+        height: 100%;
+        font-size: 13px;
+    }
+    .offerdetails{
+        width: 300px;
+    }
+    .services{
+        grid-template-columns: 1fr;
+    }
+    
+    
+}
+
+
+
+
+/* for touch screen device */
+@media (hover: none) {
+    .card_data {
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 1.2s ease-in-out;
+      }
+
+      .servicesAval{
+        height: 100%;
+        padding: 40px 0px 50px 0px;
+      }
+      .services{
+        overflow: visible;
+      }
+      .card_data.show {
+        opacity: 1;
+      }
+      .serviceDetails{
+        height: 25%;
+        top: 75%;
+      }
+      
+  }
+ 
+  
+
+
+
+
+  /* for screen size above 570 but below 1100px */
+@media (600px <=width <= 1100px){
+/* popular destination css */
+
+    .destination{
+        margin-top: 40px;
+        height: 100%;
+        gap: 40px;
+    }
+    .card_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-between;
+    }
+    
+    /* css for special offer section */
+    .special_offers{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        gap: 10px;
+        margin-top: 60px;
+    }
+    .offerimg img{
+        height: 40vmin;
+    }
+    .services{
+        grid-template-columns: 1fr 1fr;
+    }
+    .servicesAval{
+        height: 100%;
+    }
+    /* css for popular pakages section */
+
+    .popularpackages{
+        height: 100%;
+    }
+    .packagescontainer{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: fit-content;
+    }
+}
